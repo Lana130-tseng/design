@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 
 // 設定畫布大小
 canvas.width = 1000;
-canvas.height = 600;
+canvas.height = 500;
 // 玩家類別
 class Player {
     constructor() {
@@ -26,7 +26,7 @@ class Player {
         this.images = [];
         for (let i = 1; i <= this.frameCount; i++) {
             const img = new Image();
-            img.src = 'https://raw.githubusercontent.com/Lana130-tseng/design/main/a${file:i:i}.png';
+            img.src = 'https://raw.githubusercontent.com/Lana130-tseng/design/main/a${file:i}.png';
             this.images.push(img);
         }
         this.currentImage = this.images[0];
