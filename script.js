@@ -4,7 +4,6 @@ const ctx = canvas.getContext('2d');
 // 設定畫布大小
 canvas.width = 1000;
 canvas.height = 600;
-canvas.backgroundcolor="#D0D0D0"
 // 玩家類別
 class Player {
     constructor() {
@@ -31,7 +30,7 @@ class Player {
             this.images.push(img);
         }
         this.currentImage = this.images[0];
-       
+
         // 新增文字提示相關屬性
         this.showText = false;
         this.textTimer = null;
@@ -148,7 +147,7 @@ window.addEventListener('keyup', (e) => {
 });
 
 // 遊戲主迴圈
-function gameLoop() 
+function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // 更新玩家位置
