@@ -148,7 +148,7 @@ window.addEventListener('keyup', (e) => {
 });
 
 // 遊戲主迴圈
-function gameLoop() {a${file=i}
+function gameLoop() 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // 更新玩家位置
