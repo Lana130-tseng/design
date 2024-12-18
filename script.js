@@ -27,7 +27,7 @@ class Player {
         this.images = [];
         for (let i = 1; i <= this.frameCount; i++) {
             const img = new Image();
-        rc = `https://github.com/Lana130-tseng/design/raw/a${i}.png`;
+        ![](https://github.com/Lana130-tseng/design/raw/a${i}.png)
         images.push(img);
         }
         this.currentImage = this.images[0];
