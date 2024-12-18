@@ -29,7 +29,7 @@ class Player {
             img.src = 'https://raw.githubusercontent.com/Lana130-tseng/design/main/${file:i:i}.png';
             this.images.push(img);
         }
-        this.currentImage = this.images[0];
+        this.currentImage = this.images[1];
 
         // 新增文字提示相關屬性
         this.showText = false;
