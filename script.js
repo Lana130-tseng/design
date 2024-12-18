@@ -27,7 +27,7 @@ class Player {
         this.images = [];
         for (let i = 1; i <= this.frameCount; i++) {
             const img = new Image();
-            img.src = `C:/Users/yvm09/Downloads/顏色知識測驗/20241218/a${i}.png`;
+            img.src = `a${i}.png`;
             this.images.push(img);
         }
         this.currentImage = this.images[0];
