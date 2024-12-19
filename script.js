@@ -3,7 +3,8 @@ const ctx = canvas.getContext('2d');
 
 // 設定畫布大小
 canvas.width = 1000;
-canvas.height = 500;
+canvas.height = 600;
+canvas.backgroundcolor="#D0D0D0"
 // 玩家類別
 class Player {
     constructor() {
@@ -21,38 +22,19 @@ class Player {
         this.frameCount = 5; // 總幀數
         this.frameTimer = 0; // 幀計時器
         this.frameInterval = 100; // 幀切換間隔（毫秒）
-        // 載入所有圖片
-        class Player {
-    constructor() {
-        // ... existing code ...
         
         // 載入所有圖片
         this.images = [];
-        // 直接指定圖片 URL
-        const imageUrls = [
-            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/1.png',
-            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/2.png',
-            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/3.png',
-            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/4.png',
-            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/5.png'
-        ];
-        
-        imageUrls.forEach(url => {
+        for (let i = 1; i <= this.frameCount; i++) {
             const img = new Image();
-            img.crossOrigin = "anonymous";
-            img.src = url;
+            // 使用正確的 GitHub raw content URL
+            img.src = `https://raw.githubusercontent.com/Lana130-tseng/design/main/a${i}.png`;
+            img.crossOrigin = "anonymous"; // 添加這行來處理跨域問題
             this.images.push(img);
-        });
+        }
         
         this.currentImage = this.images[0];
-        
-        // ... rest of the code ...
-    }
-}
-    
-        
-    }
-}
+       
         // 新增文字提示相關屬性
         this.showText = false;
         this.textTimer = null;
