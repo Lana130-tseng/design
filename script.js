@@ -34,7 +34,10 @@ class Player {
             this.images.push(img);
         }
         this.currentImage = this.images[0];
-
+        
+        // ... rest of the code ...
+    }
+}
         // 新增文字提示相關屬性
         this.showText = false;
         this.textTimer = null;
