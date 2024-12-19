@@ -22,11 +22,15 @@ class Player {
         this.frameTimer = 0; // 幀計時器
         this.frameInterval = 100; // 幀切換間隔（毫秒）
         
+class Player {
+    constructor() {
+        // ... existing code ...
+        
         // 載入所有圖片
         this.images = [];
         for (let i = 1; i <= this.frameCount; i++) {
             const img = new Image();
-            img.src = 'https://raw.githubusercontent.com/Lana130-tseng/design/main/${a[i]}.png';
+            img.src = `https://raw.githubusercontent.com/Lana130-tseng/design/main/a${i}.png`;
             this.images.push(img);
         }
         this.currentImage = this.images[0];
