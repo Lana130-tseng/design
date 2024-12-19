@@ -21,7 +21,6 @@ class Player {
         this.frameCount = 5; // 總幀數
         this.frameTimer = 0; // 幀計時器
         this.frameInterval = 100; // 幀切換間隔（毫秒）
-        
 class Player {
     constructor() {
         // ... existing code ...
@@ -30,7 +29,9 @@ class Player {
         this.images = [];
         for (let i = 1; i <= this.frameCount; i++) {
             const img = new Image();
+            // 使用正確的 GitHub raw content URL
             img.src = `https://raw.githubusercontent.com/Lana130-tseng/design/main/a${i}.png`;
+            img.crossOrigin = "anonymous"; // 添加這行來處理跨域問題
             this.images.push(img);
         }
         this.currentImage = this.images[0];
