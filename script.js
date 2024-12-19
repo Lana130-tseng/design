@@ -26,16 +26,11 @@ class Player {
         for (let i = 1; i <= this.frameCount; i++) {
             const img = new Image();
             // 修改路徑指向 image 資料夾
-            img.src = `https://raw.githubusercontent.com/Lana130-tseng/design/main/image/a${i}.png`;
-            img.crossOrigin = "anonymous";
-            const testImg = new Image();
 testImg.crossOrigin = "anonymous";
 testImg.onload = () => console.log("圖片載入成功");
 testImg.onerror = () => console.log("圖片載入失敗");
 testImg.src = "https://raw.githubusercontent.com/Lana130-tseng/design/main/image/a1.png";
-            this.images.push(img);
-        }
-        this.currentImage = this.images[0];
+    
         
     }
 }
