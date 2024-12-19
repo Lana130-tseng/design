@@ -21,22 +21,17 @@ class Player {
         this.frameCount = 5; // 總幀數
         this.frameTimer = 0; // 幀計時器
         this.frameInterval = 100; // 幀切換間隔（毫秒）
-class Player {
-    constructor() {
-        // ... existing code ...
-        
         // 載入所有圖片
         this.images = [];
         for (let i = 1; i <= this.frameCount; i++) {
             const img = new Image();
-            // 使用正確的 GitHub raw content URL
-            img.src = `https://raw.githubusercontent.com/Lana130-tseng/design/image/a${i}.png`;
-            img.crossOrigin = "anonymous"; // 添加這行來處理跨域問題
+            // 修改路徑指向 image 資料夾
+            img.src = `https://raw.githubusercontent.com/Lana130-tseng/design/main/image/a${i}.png`;
+            img.crossOrigin = "anonymous";
             this.images.push(img);
         }
         this.currentImage = this.images[0];
         
-        // ... rest of the code ...
     }
 }
         // 新增文字提示相關屬性
