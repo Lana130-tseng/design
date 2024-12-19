@@ -30,8 +30,11 @@ class Player {
         for (let i = 1; i <= this.frameCount; i++) {
             const img = new Image();
             // 使用正確的 GitHub raw content URL
-            img.src = `https://raw.githubusercontent.com/Lana130-tseng/design/main/a${i}.png`;
-            img.crossOrigin = "anonymous"; // 添加這行來處理跨域問題
+            iconst testImg = new Image();
+testImg.crossOrigin = "anonymous";
+testImg.onload = () => console.log("圖片載入成功");
+testImg.onerror = () => console.log("圖片載入失敗");
+testImg.src = "https://raw.githubusercontent.com/Lana130-tseng/design/main/a1.png";
             this.images.push(img);
         }
         this.currentImage = this.images[0];
