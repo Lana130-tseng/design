@@ -22,14 +22,33 @@ class Player {
         this.frameTimer = 0; // 幀計時器
         this.frameInterval = 100; // 幀切換間隔（毫秒）
         // 載入所有圖片
+        class Player {
+    constructor() {
+        // ... existing code ...
+        
+        // 載入所有圖片
         this.images = [];
-        for (let i = 1; i <= this.frameCount; i++) {
+        // 直接指定圖片 URL
+        const imageUrls = [
+            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/1.png',
+            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/2.png',
+            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/3.png',
+            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/4.png',
+            'https://raw.githubusercontent.com/Lana130-tseng/design/main/image/5.png'
+        ];
+        
+        imageUrls.forEach(url => {
             const img = new Image();
-            // 修改路徑指向 image 資料夾
-testImg.crossOrigin = "anonymous";
-testImg.onload = () => console.log("圖片載入成功");
-testImg.onerror = () => console.log("圖片載入失敗");
-testImg.src = "https://raw.githubusercontent.com/Lana130-tseng/design/main/image/a1.png";
+            img.crossOrigin = "anonymous";
+            img.src = url;
+            this.images.push(img);
+        });
+        
+        this.currentImage = this.images[0];
+        
+        // ... rest of the code ...
+    }
+}
     
         
     }
